@@ -189,6 +189,7 @@ class ScLangProcess:
 			'Chromium on macOS will fall back to software rendering in this case.',
 			'Hardware acceleration and features such as WebGL will not be available.',
 			r'\[\d*/\d*\.\d*:WARNING:resource_bundle_qt.cpp\(\d*\)\] locale_file_path.empty\(\) for locale',
+			'QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to \'/tmp/runtime-runner\'',
 			]
 
 		set_non_block(self.proc.stdin)
