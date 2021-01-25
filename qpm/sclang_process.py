@@ -144,7 +144,7 @@ class ScLangProcess:
 				global_app.log.debug('Initializing offscreen display.')
 				env['QT_PLATFORM_PLUGIN'] = 'offscreen'
 				env['DISPLAY'] = ':99.0'
-				subprocess.Popen("/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16", shell=True, env=env)
+				subprocess.Popen("/usr/bin/Xvfb :99 -ac -screen 0 1280x1024x16", shell=True, env=env)
 
 			cmd = [self.path, '-i' 'python', '-a']
 			if self.includes or self.excludes:
