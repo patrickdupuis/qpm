@@ -87,7 +87,7 @@
 			if (class.isNil) {
 				wildcardTest["error"] = "Class % not found".format(class);
 				wildcardTest["completed"] = true;
-				~writeResult.(test_record, file);
+				// ~writeResult.(test_record, file);
 			} {
 				class.tryPerform(\findTestMethods).do {
 					| test |
@@ -101,7 +101,7 @@
 					tests.add(newTest);
 				};
 				tests.remove(wildcardTest);
-				~writeResult.(test_record, file);
+				// ~writeResult.(test_record, file);
 			}
 		};
 
