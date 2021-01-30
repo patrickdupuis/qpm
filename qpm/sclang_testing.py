@@ -101,7 +101,7 @@ class SCTestRun:
 	def read_test_plan(self):
 		with open(self.test_plan_path, "r") as f:
 			test_plan_string = f.read()
-			test_plan = json.loads(test_plan_string)
+			test_plan = json.loads(test_plan_string, strict=False)
 			if test_plan.get('tests'):
 				self.test_plan = test_plan
 			else:
