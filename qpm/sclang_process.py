@@ -191,6 +191,7 @@ class ScLangProcess:
 			r'\[\d*/\d*\.\d*:WARNING:resource_bundle_qt.cpp\(\d*\)\] locale_file_path.empty\(\) for locale',
 			'QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to \'/tmp/runtime-runner\'',
 			'Unable to create basic Accelerated OpenGL renderer.',
+			'Core Image is now using the software OpenGL renderer. This will be slow.',
 			]
 
 		set_non_block(self.proc.stdin)
