@@ -105,6 +105,7 @@
 			}
 		};
 
+		1.wait; // it seems we need time to finish wring to the file...?
 		// Ensure excluded tests are not run
 		toExclude = tests.select({
 			|t|
@@ -130,6 +131,7 @@
 		"After exclude: ".post;
 		tests.do(_.postln);
 
+		1.wait; // it seems we need time to finish wring to the file...?
 		// Okay, time to run the tests
 		tests.do {
 			| test |
