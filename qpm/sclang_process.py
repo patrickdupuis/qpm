@@ -190,6 +190,7 @@ class ScLangProcess:
 			'Hardware acceleration and features such as WebGL will not be available.',
 			r'\[\d*/\d*\.\d*:WARNING:resource_bundle_qt.cpp\(\d*\)\] locale_file_path.empty\(\) for locale',
 			'QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to \'/tmp/runtime-runner\'',
+			'Unable to create basic Accelerated OpenGL renderer.',
 			]
 
 		set_non_block(self.proc.stdin)
