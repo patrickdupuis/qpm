@@ -50,7 +50,7 @@ def do_execute(sclang_path, code, includes=[], excludes=[], print_output=False):
 		raise Exception("No sclang binary found in path %s" % sclang_path)
 
 	#app.render({ "message": "Launching sclang at %s" % sclang_path })
-	proc = ScLangProcess(sclang_path, print_output=print_output)
+	proc = ScLangProcess(sclang_path, headless=False, print_output=print_output)
 	for i in includes: proc.include(i)
 	for e in excludes: proc.exclude(e)
 	if not(proc.launch()):
