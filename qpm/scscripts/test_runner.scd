@@ -156,6 +156,7 @@
 							~writeResult.(test_record, file);
 						} {
 							class.findTestMethods();
+							class.setUpClass();
 
 							script = class.findTestMethods().detect({ |m| m.name == testname });
 							if (script.notNil) {
@@ -199,7 +200,9 @@
 								test["error"] = "Test not found.";
 								test["completed"] = true;
 								~writeResult.(test_record, file);
-							}
+							};
+
+							class.tearDownClass();
 						}
 					}
 				}
